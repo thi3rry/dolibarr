@@ -243,7 +243,7 @@ if ($_POST) {
 		// for conf PRODUIT_MULTIPRICES
 		if ($conf->global->PRODUIT_MULTIPRICES) {
 			$level_price_impact = array_map('price2num', $level_price_impact);
-			$level_price_impact_percent = array_map(function($a) {
+			$level_price_impact_percent = array_map(function ($a) {
 				return !empty($a); }, $level_price_impact_percent);
 
 			$prodcomb->variation_price = $level_price_impact[1];
