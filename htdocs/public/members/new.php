@@ -632,7 +632,9 @@ print '<tr><td>'.$langs->trans("URLPhoto").'</td><td><input type="text" name="ph
 print '<tr><td>'.$langs->trans("Public").'</td><td><input type="checkbox" name="public"></td></tr>'."\n";
 // Other attributes
 $tpl_context = 'public'; //BUG #11554 : define templae context to public
+$action = 'create'; // fix for dolibarr get values submitted for commonObject class
 include DOL_DOCUMENT_ROOT.'/core/tpl/extrafields_add.tpl.php';
+$action = 'add'; // Restore action for new.php
 // Comments
 print '<tr>';
 print '<td class="tdtop">'.$langs->trans("Comments").'</td>';
